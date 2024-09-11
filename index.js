@@ -1,50 +1,27 @@
-/**
- * @param {number} a
- * @param {number} b
- * @returns {number}
- */
-function add(a, b) {
+
+function add(a: number, b: number): number {
     return a + b;
 }
 
-/**
- * @param {number} a
- * @param {number} b
- * @returns {number}
- */
-function subtract(a, b) {
+
+function subtract(a: number, b: number): number {
     return a - b;
 }
 
-/**
- * @param {number[]} numbers
- * @returns {number}
- */
-function multiplyArray(numbers) {
+function multiplyArray(numbers: number[]): number {
     return numbers.reduce((product, num) => product * num, 1);
 }
 
-/**
- * @param {number[]} numbers
- * @returns {number}
- */
-function maxInArray(numbers) {
+function maxInArray(numbers: number[]): number {
     return Math.max(...numbers);
 }
 
-/**
- * @param {string} str
- * @returns {string}
- */
-function reverseString(str) {
+function reverseString(str: string): string {
     return str.split('').reverse().join('');
 }
 
-/**
- * @param {number} n
- * @returns {boolean}
- */
-function isPrime(n) {
+
+function isPrime(n: number): boolean {
     if (n <= 1) return false;
     for (let i = 2; i < n; i++) {
         if (n % i === 0) return false;
@@ -52,224 +29,116 @@ function isPrime(n) {
     return true;
 }
 
-/**
- * @param {number[]} numbers
- * @returns {boolean}
- */
-function allEven(numbers) {
+function allEven(numbers: number[]): boolean {
     return numbers.every(num => num % 2 === 0);
 }
 
-/**
- * @param {Object[]} items
- * @param {string} key
- * @returns {string[]}
- */
-function extractValuesByKey(items, key) {
+function extractValuesByKey(items: Object[], key: string): string[] {
     return items.map(item => item[key]);
 }
 
-/**
- * @param {string[]} strings
- * @param {string} term
- * @returns {boolean}
- */
-function containsString(strings, term) {
+function containsString(strings: string[], term: string): boolean {
     return strings.includes(term);
 }
 
-/**
- * @param {boolean} value
- * @returns {string}
- */
-function booleanToString(value) {
+function booleanToString(value: boolean): string {
     return value ? 'true' : 'false';
 }
 
-/**
- * @param {number} num
- * @returns {string}
- */
-function numberToString(num) {
+function numberToString(num: number): string {
     return num.toString();
 }
 
-/**
- * @param {string} numStr
- * @returns {number}
- */
-function stringToNumber(numStr) {
+function stringToNumber(numStr: string): number {
     return parseInt(numStr, 10);
 }
 
-/**
- * @param {string[]} strings
- * @returns {string}
- */
-function joinStrings(strings) {
+function joinStrings(strings: string[]): string {
     return strings.join(' ');
 }
 
-/**
- * @param {string[]} names
- * @returns {string[]}
- */
-function capitalizeNames(names) {
+function capitalizeNames(names: string[]): string[] {
     return names.map(name => name.charAt(0).toUpperCase() + name.slice(1));
 }
 
-/**
- * @param {number[]} nums
- * @returns {number}
- */
-function sumOfSquares(nums) {
+function sumOfSquares(nums: number[]): number {
     return nums.reduce((sum, num) => sum + num * num, 0);
 }
 
-/**
- * @param {number} base
- * @param {number} exponent
- * @returns {number}
- */
-function power(base, exponent) {
+function power(base: number, exponent: number): number {
     return Math.pow(base, exponent);
 }
 
-/**
- * @param {string[]} words
- * @returns {number}
- */
-function longestWordLength(words) {
+function longestWordLength(words: string[]): number {
     return words.reduce((max, word) => Math.max(max, word.length), 0);
 }
 
-/**
- * @param {number} num
- * @returns {string}
- */
-function fizzBuzz(num) {
+function fizzBuzz(num: number): string {
     if (num % 3 === 0 && num % 5 === 0) return 'FizzBuzz';
     if (num % 3 === 0) return 'Fizz';
     if (num % 5 === 0) return 'Buzz';
     return num.toString();
 }
 
-/**
- * @param {number} n
- * @returns {number}
- */
-function factorial(n) {
+function factorial(n: number): number {
     if (n === 0) return 1;
     return n * factorial(n - 1);
 }
 
-/**
- * @param {number[]} nums
- * @returns {number[]}
- */
-function squareNumbers(nums) {
+
+function squareNumbers(nums: number[]): number[] {
     return nums.map(num => num * num);
 }
 
-/**
- * @param {number[]} nums
- * @returns {number}
- */
-function average(nums) {
+function average(nums: number[]): number {
     const total = nums.reduce((sum, num) => sum + num, 0);
     return total / nums.length;
 }
 
-/**
- * @param {string} str
- * @returns {string}
- */
-function removeVowels(str) {
+function removeVowels(str: string): string {
     return str.replace(/[aeiou]/gi, '');
 }
 
-/**
- * @param {string} str
- * @returns {boolean}
- */
-function isPalindrome(str) {
+
+function isPalindrome(str: string): boolean {
     const reversed = str.split('').reverse().join('');
     return str === reversed;
 }
 
-/**
- * @param {number[]} nums
- * @returns {number}
- */
-function productOfArray(nums) {
+function productOfArray(nums: number[]): number {
     return nums.reduce((product, num) => product * num, 1);
 }
 
-/**
- * @param {number[]} nums
- * @returns {number[]}
- */
-function filterOdds(nums) {
+function filterOdds(nums: number[]): number[] {
     return nums.filter(num => num % 2 === 0);
 }
 
-/**
- * @param {string[]} strings
- * @returns {string[]}
- */
-function sortStrings(strings) {
+function sortStrings(strings: string[]): string[] {
     return strings.sort();
 }
 
-/**
- * @param {number} n
- * @returns {number}
- */
-function fibonacci(n) {
+function fibonacci(n: number): number {
     if (n <= 1) return n;
     return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-/**
- * @param {string} str
- * @returns {number}
- */
-function countVowels(str) {
+function countVowels(str: string): number {
     return (str.match(/[aeiou]/gi) || []).length;
 }
 
-/**
- * @param {Array} arr1
- * @param {Array} arr2
- * @returns {Array}
- */
-function mergeArrays(arr1, arr2) {
+function mergeArrays(arr1: any[], arr2: any[]): any[] {
     return [...arr1, ...arr2];
 }
 
-/**
- * @param {Array} arr
- * @returns {Array}
- */
-function uniqueValues(arr) {
+function uniqueValues(arr: any[]): any[] {
     return [...new Set(arr)];
 }
 
-/**
- * @param {number} min
- * @param {number} max
- * @returns {number}
- */
-function randomInt(min, max) {
+function randomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-/**
- * @param {number[]} arr
- * @param {number} target
- * @returns {number}
- */
-function binarySearch(arr, target) {
+function binarySearch(arr: number[], target: number): number {
     let low = 0;
     let high = arr.length - 1;
     while (low <= high) {
@@ -281,54 +150,28 @@ function binarySearch(arr, target) {
     return -1;
 }
 
-/**
- * @param {Array} arr
- * @returns {Array}
- */
-function flattenArray(arr) {
+function flattenArray(arr: any[]): any[] {
     return arr.reduce((flat, toFlatten) => flat.concat(Array.isArray(toFlatten) ? flattenArray(toFlatten) : toFlatten), []);
 }
 
-/**
- * @param {number} a
- * @param {number} b
- * @returns {number}
- */
-function gcd(a, b) {
+
+function gcd(a: number, b: number): number {
     return b === 0 ? a : gcd(b, a % b);
 }
 
-/**
- * @param {number} a
- * @param {number} b
- * @returns {number}
- */
-function lcm(a, b) {
+function lcm(a: number, b: number): number {
     return (a * b) / gcd(a, b);
 }
 
-/**
- * @param {string} str1
- * @param {string} str2
- * @returns {boolean}
- */
-function anagram(str1, str2) {
+function anagram(str1: string, str2: string): boolean {
     return str1.split('').sort().join('') === str2.split('').sort().join('');
 }
 
-/**
- * @param {Array} arr
- * @returns {*}
- */
-function getRandomElement(arr) {
+function getRandomElement(arr: any[]): any {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
-/**
- * @param {Array} arr
- * @returns {Array}
- */
-function shuffleArray(arr) {
+function shuffleArray(arr: any[]): any[] {
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -336,28 +179,16 @@ function shuffleArray(arr) {
     return arr;
 }
 
-/**
- * @param {Object} obj
- * @returns {Object}
- */
-function deepClone(obj) {
+function deepClone(obj: Object): Object {
     return JSON.parse(JSON.stringify(obj));
 }
 
-/**
- * @param {Array} arr
- * @param {*} value
- * @returns {number}
- */
-function countOccurrences(arr, value) {
+
+function countOccurrences(arr: any[], value: any): number {
     return arr.filter(item => item === value).length;
 }
 
-/**
- * @param {string} hex
- * @returns {number[]}
- */
-function hexToRgb(hex) {
+function hexToRgb(hex: string): number[] {
     const bigint = parseInt(hex.slice(1), 16);
     const r = (bigint >> 16) & 255;
     const g = (bigint >> 8) & 255;
@@ -365,12 +196,6 @@ function hexToRgb(hex) {
     return [r, g, b];
 }
 
-/**
- * @param {number} r
- * @param {number} g
- * @param {number} b
- * @returns {string}
- */
-function rgbToHex(r, g, b) {
+function rgbToHex(r: number, g: number, b: number): string {
     return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
 }
